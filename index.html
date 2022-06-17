@@ -6,6 +6,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Langing Page</title>
         <link rel="stylesheet" href="style.css"/>
+         <script>
+            function check () {
+              // (C1) INIT
+              var valid = true, error = "", field = "";
+            
+              // (C2) FNAME
+              field = document.getElementById("fname");
+              error = document.getElementById("Fname");
+              if (!field.checkValidity()) {
+                valid = false;
+                field.classList.add("err");
+                error.innerHTML = "First Name cannot be empty\r\n";
+              } else {
+                field.classList.remove("err");
+                error.innerHTML = "";
+              }
+            
+              // (C3) LNAME
+              field = document.getElementById("lname");
+              error = document.getElementById("Lname");
+              if (!field.checkValidity()) {
+                valid = false;
+                field.classList.add("err");
+                error.innerHTML = "Last Name cannot be empty\r\n";
+              } else {
+                field.classList.remove("err");
+                error.innerHTML = "";
+              }
+            
+
+               // (C3) EMAIL
+               field = document.getElementById("email");
+              error = document.getElementById("mail");
+              if (!field.checkValidity()) {
+                valid = false;
+                field.classList.add("err");
+                error.innerHTML = "Looks like this is not an email\r\n";
+              } else {
+                field.classList.remove("err");
+                error.innerHTML = "";
+              }
+
+               // (C4) PASSWORD
+               field = document.getElementById("password");
+              error = document.getElementById("pass");
+              if (!field.checkValidity()) {
+                valid = false;
+                field.classList.add("err");
+                error.innerHTML = "Password cannot be empty\r\n";
+              } else {
+                field.classList.remove("err");
+                error.innerHTML = "";
+              }
+
+              
+  // (C4) RESULT
+  return valid;
+}
+</script>
     </head>
 
     <body>
@@ -31,18 +90,22 @@
                             <form action="">
                                 <div class="inp">
                                     <input type="text" class="icon-rtl" name="fname" id="fname" placeholder="First Name" title="first name cannot be empty" required/>
+                                    <div id="Fname" class="emsg"></div> 
                                 </div>
 
                                 <div class="inp">
                                     <input type="text" class="icon-rtl" name="lname" id="lname" placeholder="Last Name" title="last name cannot be empty" required/>
+                                     <div id="Lname" class="emsg"></div>
                                 </div>
 
                                 <div class="inp">
                                     <input type="email" class="icon-rtl" name="email" id="email" placeholder="example\ymail.com" title="looks like this is not an email" required/>
+                                     <div id="mail" class="emsg"></div> 
                                 </div>
 
                                 <div class="inp">
                                     <input type="password" class="icon-rtl" name="password" id="password" placeholder="Password" title="password cannot be empty" required/>
+                                    <div id="pass" class="emsg"></div> 
                                 </div>
                                 <div class="inp">
                                     <a href="#"><input type="submit" value="CLAIM YOUR FREE TRIAL"/></a>
