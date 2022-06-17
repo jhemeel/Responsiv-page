@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 .err { background: #ffe6ee; border: 1px solid hsl(0, 100%, 74%); 
-    background: url("./icon-error.svg") no-repeat right;
+    background: url(./icon-error.svg) no-repeat right;
     background-size: 20px;}
 .emsg { color: hsl(0, 100%, 74%); font-size: 10px; font-weight: 500; margin-left:100px; font-family: 'Poppins', sans-serif; }
 
